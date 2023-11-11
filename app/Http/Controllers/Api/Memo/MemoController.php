@@ -11,6 +11,20 @@ class MemoController extends Controller
     
     public function store(Request $request): JsonResponse
     {
-        // 未実装なのでテストは必ず失敗
+        $title = $request->get('title');
+        $content = $request->get('content');
+ 
+        if ($title === null || $content === null) {
+            return response()->json([
+                'message' => '登録失敗',
+            ]);
+        }
+ 
+        // メモの作成処理を実装
+        // ここでは、まだDBに接続しないため、処理を省略しています
+ 
+        return response()->json([
+            'message' => '登録完了',
+        ]);
     }
 }
