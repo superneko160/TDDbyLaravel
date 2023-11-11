@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Http\Requests\MemoRequest;
+use App\Models\Memo;
 
 class MemoController extends Controller
 {

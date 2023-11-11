@@ -8,21 +8,23 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * (php artisan migrate)
      */
     public function up(): void
     {
-        Schema::create('password_reset_tokens', function (Blueprint $table) {
-            $table->string('email')->primary();
-            $table->string('token');
-            $table->timestamp('created_at')->nullable();
+        Schema::create('memos', function (Blueprint $table) {
+            $table->id();  // primary key and auto increment
+            $table->string('title');
+            $table->string('content');
         });
     }
 
     /**
      * Reverse the migrations.
+     * (php artisan migrate:rollback)
      */
     public function down(): void
     {
-        Schema::dropIfExists('password_reset_tokens');
+        Schema::dropIfExists('memos');
     }
 };
