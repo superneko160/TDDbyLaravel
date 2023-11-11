@@ -13,6 +13,11 @@ class MemoController extends Controller
     
     public function store(MemoRequest $request): JsonResponse
     {
+        $validated = $request->validated();
+        Memo::create([ 
+            'title' => $validated['title'], 
+            'content' => $validated['content'], 
+        ]); 
         return response()->json([
             'message' => '登録完了',
         ]);
