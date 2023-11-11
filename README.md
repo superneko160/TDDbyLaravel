@@ -1,6 +1,17 @@
 # TDDbyLaravel
 TDD by Laravel10
 
+## SetUp
+
+### .env
+```
+DB_DATABASE=memo
+```
+
+### Create Table
+```
+php artisan migrate
+```
 
 ## TestCode Creation
 
