@@ -21,6 +21,8 @@ php artisan test
 
 ## Test Steps
 
+Specifics: Check git log.
+
 ### Step1 Red
 Write tests that don't pass.
 
